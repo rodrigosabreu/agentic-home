@@ -23,7 +23,38 @@ Cada entrada de projeto segue esta estrutura:
 
 ## 📚 Projetos Registrados
 
-*Nenhum projeto registrado ainda. Adicione seu primeiro projeto abaixo.*
+### 1. Crivo Crédito Demo
+| Campo | Valor |
+|-------|-------|
+| **Nome** | crivo-credito-demo |
+| **Descrição** | POC de análise de crédito com simulação, motor de decisão e API REST — modo simulado |
+| **Caminho Local** | `/opt/data/projects/crivo-credito-demo` |
+| **URL Remota** | https://github.com/rodrigosabreu/crivo-credito-demo |
+| **AGENTS.md** | `AGENTS.md` |
+| **CLI/Interface** | `docker-compose up` / `curl http://localhost:8000/simular` |
+| **Status** | `protótipo` |
+
+### 2. ContractAI
+| Campo | Valor |
+|-------|-------|
+| **Nome** | contractai |
+| **Descrição** | Agente de análise de contratos com IA — extração de cláusulas, riscos e compliance |
+| **Caminho Local** | `/opt/data/projects/contractai` |
+| **URL Remota** | https://github.com/rodrigosabreu/contractai |
+| **AGENTS.md** | `AGENTS.md` |
+| **CLI/Interface** | `make dev` / `docker-compose up` |
+| **Status** | `protótipo` |
+
+### 3. Sistema Condomínio QR
+| Campo | Valor |
+|-------|-------|
+| **Nome** | sistema-condominio-qr |
+| **Descrição** | Sistema de gestão de condomínios com QR Code para acesso, reservas e comunicados |
+| **Caminho Local** | `/opt/data/projects/sistema-condominio-qr` |
+| **URL Remota** | https://github.com/rodrigosabreu/sistema-condominio-qr |
+| **AGENTS.md** | `AGENTS.md` |
+| **CLI/Interface** | `docker-compose up` |
+| **Status** | `protótipo` |
 
 ---
 
@@ -61,4 +92,4 @@ git push origin main
 ---
 
 *Última atualização: 2024*  
-*Mantenedor: [Seu Nome]*
+*Mantenedor: Rodrigo Abreu*
