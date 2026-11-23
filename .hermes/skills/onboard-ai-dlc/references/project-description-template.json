@@ -1,0 +1,26 @@
+{
+  "template": "<nome do projeto> — <descrição curta>. <propósito>. Stack: <backend stack> / <frontend stack>. <principais features>. <compliance>. Estado: <estado atual>.",
+  "fields": {
+    "nome_do_projeto": {"required": true, "description": "Nome canônico do projeto"},
+    "proposito": {"required": true, "description": "O que o projeto faz em uma frase"},
+    "stack_backend": {"required": true, "description": "Framework, linguagem, DB, ORM, queue"},
+    "stack_frontend": {"required": false, "description": "Framework, linguagem, styling"},
+    "principais_features": {"required": true, "description": "Funcionalidades core"},
+    "compliance": {"required": false, "description": "LGPD, SOX, PCI-DSS, etc."},
+    "estado_atual": {"required": true, "description": "POC, MVP, produção, etc."}
+  },
+  "examples": {
+    "greenfield": "MeuProjeto — Plataforma de gestão de tarefas colaborativa. Permite criar quadros, cartões, atribuir responsáveis, prazos e comentários. Stack: Backend FastAPI 0.109+ / Python 3.11+ / PostgreSQL 15+ / SQLAlchemy 2.0 async / Celery + Redis / JWT HS256 / Frontend Next.js 14+ / TypeScript / Tailwind CSS / React Hook Form + Zod. Estado: Greenfield — estrutura inicial, sem código.",
+    "brownfield": "SistemaLegado — Sistema de gestão financeira legado em migração. Permite conciliação bancária, emissão de relatórios, integração com bancos via Open Banking. Stack: Backend Java 17 / Spring Boot 3.2 / PostgreSQL 15 / JPA Hibernate / Frontend Angular 17 / TypeScript / Tailwind. Multi-tenancy por organization_id. LGPD compliance parcial. Estado: Brownfield — código legado em produção, sem testes automatizados, sem CI/CD, sem AI-DLC.",
+    "contractai": "ContractAI — Intelligent Contract Analysis Platform. Prova de conceito para apoiar a análise de contratos com inteligência artificial. A aplicação permite cadastrar uma organização, enviar um documento (PDF/DOCX/TXT) e solicitar uma análise estruturada de cláusulas e riscos. Stack: Backend FastAPI 0.109+ / Python 3.11+ / PostgreSQL 15+ com pgvector (produção) / SQLite (desenvolvimento) / SQLAlchemy 2.0 async / Alembic / Celery + Redis / JWT HS256 com token revocation (JTI blacklist) + MFA TOTP / LLM Providers: OpenAI (GPT-4), NVIDIA (Nemotron), Hermes (fallback desabilitado) / Document Processing: pdfplumber, pypdf, python-docx, Tesseract OCR / Vector Search: pgvector 1536-dim / Frontend Next.js 14+ App Router / TypeScript / Tailwind CSS / React Hook Form + Zod / Axios / Vitest + Playwright. Multi-tenancy por organization_id com roles admin/manager/analyst/viewer. LGPD compliance: export/delete endpoints, audit logging, retention policies. Estado: POC funcional, testes parciais, sem CI/CD, sem AI-DLC."
+  },
+  "validation": {
+    "rules": [
+      "Ser JSON válido (string escapada)",
+      "Conter todos campos obrigatórios",
+      "Ser uma única linha (sem quebras de linha não escapadas)",
+      "Ser parsable: json.loads(open('project-description.json').read())"
+    ]
+  },
+  "location": "/opt/data/projects/<projeto>/aidlc/spaces/default/intents/<intent-id>/project-description.json"
+}

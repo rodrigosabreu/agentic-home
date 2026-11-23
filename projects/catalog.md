@@ -28,10 +28,10 @@ Cada entrada de projeto segue esta estrutura:
 |-------|-------|
 | **Nome** | crivo-credito-demo |
 | **Descrição** | POC de análise de crédito com simulação, motor de decisão e API REST — modo simulado |
-| **Caminho Local** | `/opt/data/projects/crivo-credito-demo` |
+| **Caminho Local** | `/opt/data/projects/crivo-credito` |
 | **URL Remota** | https://github.com/rodrigosabreu/crivo-credito-demo |
 | **AGENTS.md** | `AGENTS.md` |
-| **CLI/Interface** | `docker-compose up` / `curl http://localhost:8000/simular` |
+| **CLI/Interface** | `python3 run.py` / `curl -X POST http://localhost:8000/api/execucoes -d '{"cenario":"completo"}'` |
 | **Status** | `protótipo` |
 
 ### 2. ContractAI
